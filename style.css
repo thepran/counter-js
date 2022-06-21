@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100wh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.container {
+  background: linear-gradient(45deg, #c2a3a7b9, #cfc0cfce, #d85163b8);
+  width: 500px;
+  text-align: center;
+  padding: 50px;
+  border-radius: 10px;
+  position: relative;
+}
+.container::before {
+  content: "";
+  background-image: url("http://tny.im/su1");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  z-index: -1;
+}
+.container h1 {
+  margin: 10px;
+  color: #4d464c;
+}
+.container h2 {
+  margin: 10px;
+  font-size: 3rem;
+  color: #551a07;
+  text-shadow: 2px 2px 4px #cac2c2;
+  font-weight: 800;
+}
+
+button {
+  cursor: pointer;
+  font-size: 15px;
+  border: none;
+  outline: none;
+}
+button:disabled {
+  background-color: yellow;
+  cursor: not-allowed;
+}
+
+#increment-btn,
+#decrement-btn {
+  padding: 2px;
+  width: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin: 10px -2px;
+}
+#decrement-btn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #eb4343;
+}
+#decrement-btn:hover {
+  background-color: #e62121;
+}
+#increment-btn {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #117e11;
+}
+#increment-btn:hover {
+  background-color: #159b15;
+}
+#increment-btn:disabled,
+#decrement-btn:disabled {
+  background-color: #a19b9b;
+  color: #cac2c2;
+}
+#save-btn,
+#reset-btn {
+  width: 80%;
+  margin: 5px;
+  padding: 10px;
+  text-transform: capitalize;
+
+  border-radius: 5px;
+  color: #dfe7ee;
+  transition: all 0.7s ease-in-out;
+}
+#save-btn {
+  background-color: #2177e5;
+  transition: all 0.7s ease-in-out;
+}
+#reset-btn {
+  background-color: #c23535;
+}
+#save-btn:hover,
+#reset-btn:hover {
+  background-color: #050505;
+}
+
+.container p {
+  font-size: 25px;
+  margin: 20px;
+  color: #fff;
+}
+
+@media (max-width: 612px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 50px;
+  }
+}
