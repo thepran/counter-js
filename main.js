@@ -32,6 +32,7 @@ function save() {
   countEl.textContent = 0;
   count = 0;
   decrementButton.disabled = true;
+  incrementButton.disabled = false;
 }
 
 function reset() {
